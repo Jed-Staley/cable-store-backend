@@ -19,12 +19,12 @@ app.use(cors());
 app.use(timestamp);
 app.use(logger);
 
+// routes
+app.get('/', proofOfLife);
+
 // handlers implementation
 app.use('*', handleNotFound);
 app.use(handleError);
-
-// routes
-app.get('/', proofOfLife);
 
 // ROUTE FUNCTIONS
 
